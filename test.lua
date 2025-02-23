@@ -57,3 +57,12 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Dough_King"))()
 end
 })
+
+-------TOGGLE 
+
+     Toggle = AddToggle(Tab2o, {
+      Name = "Auto Turn On Buso",
+      Default = false,
+      Callback = function()
+     end
+    })
