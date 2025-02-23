@@ -84,7 +84,7 @@ end
 
   Toggle = AddToggle(Tab2o, {
     Name = "Auto Turn On Buso",
-    Default = false,
+    Default = true,
     Callback = function(value)
         local function EnableBuso()
             if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
