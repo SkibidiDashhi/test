@@ -37,7 +37,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 -------TOGGLE 
 
      Toggle = AddToggle(Tab1o, {
-      Name = "Auto Kill RipIndra",
+      Name = "Auto Kill RipIndra(wait update)",
       Default = false,
       Callback = function()
      end
@@ -51,6 +51,18 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Rip_Indra"))()
 end
 })
+
+-------TOGGLE 
+
+     Toggle = AddToggle(Tab1o, {
+      Name = "Auto Kill DoughKing(wait update)",
+      Default = false,
+      Callback = function()
+     end
+    })
+
+------- BUTTON
+
    AddButton(Tab1o, {
      Name = "Auto Hop Dough King ",
     Callback = function()
