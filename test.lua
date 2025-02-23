@@ -39,11 +39,11 @@ Toggle = AddToggle(Tab1o, {
     end
 })
 
-AddButton(Tab1o, {
-    Name = "Auto Hop Rip_indra",
+    AddButton(Tab1o, {
+     Name = "Auto Hop Rip_indra",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Rip_Indra"))()
-    end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Rip_Indra"))()
+end
 })
 
 Toggle = AddToggle(Tab1o, {
@@ -53,11 +53,11 @@ Toggle = AddToggle(Tab1o, {
     end
 })
 
-AddButton(Tab1o, {
-    Name = "Auto Hop Dough King",
+   AddButton(Tab1o, {
+     Name = "Auto Hop Dough King ",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Dough_King"))()
-    end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Dough_King"))()
+end
 })
 
 Dropdown = AddDropdown(Tab2o, {
