@@ -103,7 +103,7 @@ AddButton(Tab1o, {
 Toggle = AddToggle(Tab2o, {
     Name = "Auto Turn On Buso",
     Default = true,
-    Callback = function(value)
+    Callback = function()
         local function EnableBuso()
             if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
