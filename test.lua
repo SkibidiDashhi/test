@@ -3,7 +3,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
        local Window = MakeWindow({
          Hub = {
          Title = "Random Hub",
-         Animation = "By: Dashh"
+         Animation = "YTB: Dashh"
          },
         Key = {
         KeySystem = false,
@@ -31,7 +31,6 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       
 ------ Tab
      local Tab1o = MakeTab({Name = "Main"})
-     local Tab2o = MakeTab({Name = "Setting"})
      
      
 -------TOGGLE 
@@ -45,46 +44,15 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
     
 ------- BUTTON
     
-    Name = "Auto Hop Rip_indra",
-     AddButton(Tab1o, {
+    AddButton(Tab1o, {
+     Name = "Auto Hop Rip_indra",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Rip_Indra"))()
 end
 })
-
-
--------TOGGLE 
-
-     Toggle = AddToggle(Tab1o, {
-      Name = "Auto Kill DoughKing",
-      Default = false,
-      Callback = function()
-     end
-    })
-
    AddButton(Tab1o, {
-     Name = "Auto Hop DoughKing",
+     Name = "Auto Hop Dough King ",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnBeoDepTrai/refs/heads/main/Dough_King"))()
 end
-})
-
--------TOGGLE 
-
-     Toggle = AddToggle(Tab2o, {
-    Name = "Auto Turn On Buso",
-    Default = false,
-    Callback = function(value)
-        local function EnableBuso()
-            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
-            end
-        end
-
-        if value then
-            while wait() and value do
-                EnableBuso()
-            end
-        end
-    end
 })
