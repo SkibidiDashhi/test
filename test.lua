@@ -98,3 +98,31 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 	wait(1)
 	game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+
+-------TOGGLE 
+
+     Toggle = AddToggle(Tab2o, {
+      Name = "Auto Turn On Busi",
+      Default = true,
+      Callback = function()
+     end
+    })
+
+local function AutoHaki()
+    if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HasBuso") then
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+    end
+end
+
+Toggle = AddToggle(Tab2o, {
+    Name = "Auto Turn On Buso",
+    Default = true,
+    Callback = function(value)
+        if value then
+            -- Start the AutoHaki loop if the toggle is enabled
+            while wait() and value do
+                AutoHaki()
+            end
+        end
+    end
+})
