@@ -228,8 +228,6 @@ function AttackNoCD()
     end
 end
 
-local FastAttackEnabled = false
-
 Toggle = AddToggle(Tab2o, {
     Name = "Fast Attack",
     Default = true,
