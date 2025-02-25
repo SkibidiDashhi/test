@@ -145,7 +145,7 @@ function EquipTool(ToolSe)
 end
 
 Dropdown = AddDropdown(Tab2o, {
-    Name = "Select Tesst",
+    Name = "Select weapon",
     Options = {"Melee", "Sword", "Blox Fruit"},
     Default = "Melee",
     Callback = function(value)
@@ -232,10 +232,4 @@ Toggle = AddToggle(Tab2o, {
     Name = "Fast Attack",
     Default = true,
     Callback = function(state)
-        FastAttackEnabled = state
-        while FastAttackEnabled do
-            AttackNoCD()
-            wait()
-        end
-    end
 })
