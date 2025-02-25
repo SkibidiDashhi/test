@@ -227,15 +227,3 @@ function AttackNoCD()
         end
     end
 end
-
-Toggle = AddToggle(Tab2o, {
-    Name = "Fast Attack",
-    Default = true,
-    Callback = function(state)
-        FastAttackEnabled = state
-        while FastAttackEnabled do
-            AttackNoCD()
-            wait()
-        end
-    end
-})
