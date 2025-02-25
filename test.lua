@@ -105,6 +105,23 @@ local function AutoHaki()
     end
 end
 
+function EquipTool(ToolSe)
+    if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
+        local tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+    end
+end
+
+Dropdown = AddDropdown(Tab2o, {
+    Name = "Select Tesst",
+    Options = {"Melee", "Sword", "Blox Fruit"},
+    Default = "Melee",
+    Callback = function(value)
+        EquipTool(value)
+    end
+})
+
 Toggle = AddToggle(Tab2o, {
     Name = "Auto Turn On Buso",
     Default = true,
@@ -184,7 +201,7 @@ local FastAttackEnabled = false
 
 Toggle = AddToggle(Tab2o, {
     Name = "Fast Attack",
-    Default = false,
+    Default = true,
     Callback = function(state)
         FastAttackEnabled = state
         while FastAttackEnabled do
