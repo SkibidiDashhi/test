@@ -54,12 +54,43 @@ end
 
 -------TOGGLE 
 
-     Toggle = AddToggle(Tab1o, {
-      Name = "Auto Kill DoughKing",
-      Default = false,
-      Callback = function()
-     end
-    })
+Toggle = AddToggle(Tab1o, {
+    Name = "Auto Kill DoughKing",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoCakeV2 = Value
+        if _G.AutoCakeV2 then
+            spawn(function()
+                while _G.AutoCakeV2 and wait() do
+                    pcall(function()
+                        if game:GetService("Workspace").Enemies:FindFirstChild("Dough King") then
+                            for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                                if v.Name == "Dough King" then
+                                    if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                                        repeat wait(_G.Fast_Delay)
+                                            AttackNoCD()
+                                            AutoHaki()
+                                            EquipTool(SelectWeapon)
+                                            v.HumanoidRootPart.CanCollide = false
+                                            v.Humanoid.WalkSpeed = 0
+                                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                            Tween(v.HumanoidRootPart.CFrame * CFrame.new(posX, posY, posZ))
+                                        until not _G.AutoCakeV2 or not v.Parent or v.Humanoid.Health <= 0
+                                    end
+                                end
+                            end
+                        else
+                            if game:GetService("ReplicatedStorage"):FindFirstChild("Dough King") then
+                                Tween(game:GetService("ReplicatedStorage"):FindFirstChild("Dough King").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
     
    AddButton(Tab1o, {
      Name = "Auto Hop Dough King ",
